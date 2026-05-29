@@ -68,13 +68,6 @@
       gap: 20px;
       flex-wrap: wrap;
     }
-    .brand {
-      font-family: var(--serif);
-      font-weight: 500;
-      font-size: 19px;
-      letter-spacing: -0.01em;
-    }
-    .brand:hover { color: var(--accent); }
 
     nav { display: flex; align-items: center; gap: 22px; }
     .nav-links { display: flex; gap: 22px; }
@@ -162,7 +155,7 @@
     .prose p { color: var(--ink-soft); margin-bottom: 16px; }
     .prose p:last-child { margin-bottom: 0; }
 
-    /* ---------- Research ---------- */
+    /* ---------- Working Papers ---------- */
     .posts { list-style: none; }
     .post a {
       display: flex;
@@ -174,9 +167,10 @@
       transition: padding-left 0.25s ease;
     }
     .post:first-child a { border-top: 1px solid var(--line); }
-    .post a:hover { padding-left: 10px; }
+    .post a[href] { cursor: pointer; }
+    .post a[href]:hover { padding-left: 10px; }
     .post-title { font-family: var(--serif); font-size: 20px; font-weight: 500; transition: color 0.2s; }
-    .post a:hover .post-title { color: var(--accent); }
+    .post a[href]:hover .post-title { color: var(--accent); }
     .post-desc { font-size: 14px; color: var(--ink-faint); margin-top: 4px; }
     .post-date { font-size: 14px; color: var(--ink-faint); white-space: nowrap; flex-shrink: 0; }
 
@@ -225,11 +219,11 @@
 
     <!-- ===================== NAV ===================== -->
     <header class="reveal" style="animation-delay:0s">
-      <a href="/" class="brand">Junyoung Jeong</a>
       <nav>
         <span class="nav-links">
           <a href="#about">About</a>
-          <a href="#research">Research</a>
+          <a href="#wip">Working Papers</a>
+          <a href="#pub">Publications</a>
         </span>
         <span class="socials">
           <a href="https://github.com/junyoungjeong-acct" aria-label="GitHub" target="_blank" rel="noopener">
@@ -246,15 +240,12 @@
     <main>
       <section class="hero reveal" style="animation-delay:0.08s">
         <div class="hero-text">
-          <p class="eyebrow">Hello, I'm</p>
           <h1>Junyoung Jeong</h1>
           <p class="lede">
-            I am a fourth year Ph.D. student in Accounting at Stanford University.
+            Fourth year Ph.D. student in Accounting at Stanford University.
           </p>
         </div>
-        <!-- Replace headshot.jpg with your photo. A square image (e.g. 400x400) works best. -->
-        <img class="headshot" src="headshot.jpg" alt="Photo of Junyoung Jeong"
-             onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22&gt;&lt;rect width=%22160%22 height=%22160%22 fill=%22%23f3eee2%22/&gt;&lt;circle cx=%2280%22 cy=%2264%22 r=%2228%22 fill=%22%23cdc6b4%22/&gt;&lt;path d=%22M32 150c0-30 22-46 48-46s48 16 48 46%22 fill=%22%23cdc6b4%22/&gt;&lt;/svg&gt;';" />
+        <img class="headshot" src="headshot.jpg">
       </section>
 
       <!-- ===================== ABOUT ===================== -->
@@ -262,49 +253,70 @@
         <p class="section-label">About</p>
         <div class="prose">
           <p>
-            A short paragraph or two about your background, your interests, and what
-            drives your work. Keep it warm and human — this is the part people read
-            to get a sense of who you are.
-          </p>
-          <p>
-            Mention the threads that connect your projects, the problems you like
-            thinking about, and anything you'd want a stranger to know before they
-            reach out.
+            I am interested in analytic models of how regulations shape the information that firms release to the economy.
           </p>
         </div>
       </section>
 
-      <!-- ===================== Research ===================== -->
-      <section id="research" class="reveal" style="animation-delay:0.24s">
-        <p class="section-label">Research</p>
+      <!-- ===================== Working Papers ===================== -->
+      <section id="wip" class="reveal" style="animation-delay:0.24s">
+        <p class="section-label">Working Papers</p>
         <ul class="posts">
           <li class="post">
-            <a href="#">
+            <a>
               <span>
-                <div class="post-title">The title of your first post</div>
-                <div class="post-desc">A one-line description of what the post is about.</div>
+                <div class="post-title">Bank Security Reporting and Regulatory Capital Constraints</div>
+                <div class="post-authors"> Junyoung Jeong </div>
+                <div class="post-desc"> <em>Job Market Paper.</em> I develop a model to study how regulatory capital constraints
+                  affect banks' reporting incentives for available-for-sale and held-to-maturity securities.
+                </div>
               </span>
               <span class="post-date">May 2026</span>
             </a>
           </li>
           <li class="post">
-            <a href="#">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6505938" target="_blank" rel="noopener">
               <span>
-                <div class="post-title">Another thing you wrote</div>
-                <div class="post-desc">A one-line description of what the post is about.</div>
+                <div class="post-title">"The Corporate Alternative Minimum Tax and Financial Reporting Incentives" </div>
+                <div class="post-authors"> Junyoung Jeong, Rebecca Lester, and Kevin Smith. </div>
+                <div class="post-desc"> <em>Submitted for Review.</em> We develop a model to study how the Corporate Alternative 
+                  Minimum Tax (CAMT) affects firms’ financial reporting behavior and their resulting tax burdens. </div>
               </span>
-              <span class="post-date">Apr 2026</span>
+              <span class="post-date">April 2026</span>
             </a>
           </li>
           <li class="post">
-            <a href="#">
+            <a>
               <span>
-                <div class="post-title">A third piece worth reading</div>
-                <div class="post-desc">A one-line description of what the post is about.</div>
+                <div class="post-title">Complementarity and Substitution in Banking: The Role of Liquidity</div>
+                <div class="post-authors"> Junyoung Jeong and Michael Yip </div>
+                <div class="post-desc"> We develop a continuous-general equilibrium model with persistent 
+                  liquidity shocks to study how credit lines transmit liquidity shocks in the private credit sector
+                  to the banking sector. </div>
               </span>
-              <span class="post-date">Mar 2026</span>
+              <span class="post-date">May 2026</span>
             </a>
           </li>
+        </ul>
+      </section>
+
+      <!-- ===================== Publications ===================== -->
+      <section id="pub" class="reveal" style="animation-delay:0.32s">
+        <p class="section-label">Publications</p>
+        <ul class="posts">
+          <!--
+          <li class="post">
+            <a>
+              <span>
+                <div class="post-title">Publication Title</div>
+                <div class="post-authors"> Junyoung Jeong </div>
+                <div class="post-desc"> A short description of the publication, with the
+                  journal name in <em>italics</em>. </div>
+              </span>
+              <span class="post-date">2026</span>
+            </a>
+          </li>
+          -->
         </ul>
       </section>
     </main>
